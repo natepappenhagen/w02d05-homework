@@ -5,7 +5,6 @@ body {
   text-shadow: 1px 1px white;
   font-weight: 800;
 }
-
 h1 {
   font-family: 'Condiment', cursive;
 }
@@ -14,3 +13,7 @@ button {
   display: inline;
   margin: 12px;
 }
+.the-white {
+      background-color: white;
+      border: 10px solid gray;
+  }
