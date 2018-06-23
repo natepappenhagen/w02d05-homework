@@ -41,25 +41,35 @@ const lands = [
 // Chapter 1
 // ============
 const makeMiddleEarth = () => {
+  // HINT: Make a console.log for each of your functions to make sure that,
+  // when you click, the correct function is being called!
 
-  // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
   console.log("Trying to make middle earth.");
 
-  // 1. create a section tag with an id of middle-earth
+    // 1. create a section tag with an id of middle-earth
+  const $middleEarth = $('<section id="middleEarth"></section>')
 
-  // 2. append the section to the body of the DOM.
+    // 2. append the section to the body of the DOM.
+    $('body').append($middleEarth);
 
-  // 3. use a for loop to iterate over the lands array that does the following:
+    // 3. use a for loop to iterate over the lands array that does the following:
+    for (let i = 0; i < lands.length; i++) {
 
-  //   3a. creates an article tag (there should be one for each land when the loop is done)
+        // 3a. creates an article tag (there should be one for each land when the loop is done)
+          const $article = $('<article/>')
+          $article.attr('id', lands[i])
 
-  //   3b. gives each land article an `id` tag of the corresponding land name
+        //   3b. gives each land article an `id` tag of the corresponding land name
+          const $landHeader = $('<h1/>')
+          $landHeader.text(lands[i]);
 
-  //   3c. includes an h1 with the name of the land inside each land article
 
-  //   3d. appends each land to the middle-earth section
-
+        //   3c. includes an h1 with the name of the land inside each land article
+          $article.append($landHeader);
+        //   3d. appends each land to the middle-earth section
+          $middleEarth.append($article);
+}
 };
 
 // COMMIT YOUR WORK
@@ -68,36 +78,38 @@ const makeMiddleEarth = () => {
 // ============
 // Chapter 2
 // ============
+
 const makeHobbits = () => {
 
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
 
-  // 2. give each hobbit a class of "hobbit"
+    const $ul = $('<ul>').appendTo($('#The-Shire'));
 
-  // hint: create a 'ul' outside the loop upon which to append the 'li's
+    for (let i = 0; i < hobbits.length; i++){
+    $('<li>').addClass('hobbit').text(hobbits[i]).appendTo($ul);
+    }
 
-  // hint: get 'The-Shire' by using its id
 
 };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
-
 // ============
 // Chapter 3
 // ============
+
+
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
 
+  // ADD a empty DIV $('#the-ring')
+  const $div = $('<div id="the-ring"></div>');
+  $('.hobbit:eq(0)').append($div);
+
   // 2. add the ring as a child of Frodo
-
-  // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-
-  // when you think you have given Frodo the ring, check in your Elements tab
-
 };
 
 // COMMIT YOUR WORK
@@ -108,10 +120,13 @@ const keepItSecretKeepItSafe = () => {
 // ============
 const makeBaddies = () => {
 
+  const $ul = $('<ul>').appendTo($('#Mordor'));
+
+  for (let i = 0; i < baddies.length; i++){
+  $('<li>').addClass('baddy').text(baddies[i]).appendTo($ul);
+  }
   // 1. display an unordered list of baddies in Mordor
-
   // 2. give each of the baddies a class of "baddy"
-
   // 3. remember to append them to Mordor
 };
 
@@ -121,6 +136,8 @@ const makeBaddies = () => {
 // ============
 // Chapter 5
 // ============
+
+
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
@@ -254,6 +271,28 @@ const thereAndBackAgain = () => {
   // 3. Move all the hobbits back to the shire
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
