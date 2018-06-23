@@ -164,15 +164,8 @@ const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside)
   //   and move them to Rivendell
 
-
   const $hobbitsLi = $('.hobbits').detach();
   $hobbitsLi.appendTo('#Rivendell');
-
-
-  // hint: the hobbits ul is a childNode of The-Shire--
-  //  there is way to get a list of childNodes
-
-
 
 };
 
@@ -182,12 +175,17 @@ const leaveTheShire = () => {
 // ============
 // Chapter 7
 // ============
+
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
   // hint: You can get a list of elements by tag name, such as 'aside'
+  // change buddy.strider to aragorn
 
+  // find buddy.strider and save to variable
+      const $strider = $('.buddy:eq(3)')
+  // set the variable to variable.text('aragorn');
+      $strider.text('Aragorn');
 };
 
 // COMMIT YOUR WORK
