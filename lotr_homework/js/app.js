@@ -88,7 +88,7 @@ const makeHobbits = () => {
     const $ul = $('<ul>').appendTo($('#The-Shire'));
 
     for (let i = 0; i < hobbits.length; i++){
-    $('<li>').addClass('hobbit').text(hobbits[i]).appendTo($ul);
+    $('<li>').addClass('hobbits').text(hobbits[i]).appendTo($ul);
     }
 
 
@@ -161,9 +161,18 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
-  // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+  // 1. grab the hobbits (the ul in which they reside)
+  //   and move them to Rivendell
 
-  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+
+  const $hobbitsLi = $('.hobbits').detach();
+  $hobbitsLi.appendTo('#Rivendell');
+
+
+  // hint: the hobbits ul is a childNode of The-Shire--
+  //  there is way to get a list of childNodes
+
+
 
 };
 
