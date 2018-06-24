@@ -106,8 +106,10 @@ const keepItSecretKeepItSafe = () => {
   // 1. create an empty div with an id of 'the-ring'
 
   // ADD a empty DIV $('#the-ring')
-  const $div = $('<div id="the-ring"></div>');
-  $('.hobbit:eq(0)').append($div);
+
+  $oneRingToRuleThemAll = $('<div id="the-ring"></div>');
+
+  $('li:contains("Frodo")').append($oneRingToRuleThemAll);
 
   // 2. add the ring as a child of Frodo
 };
@@ -287,11 +289,14 @@ const $mordor = $('#Mordor')
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
+        $('#Mordor').append('<div id="Gollum"></div>');
 
   // 2. Move the ring from Frodo and give it to Gollum
+        $('#the-ring').detach().appendTo('#Gollum');
 
   // 3. Move Gollum into Mount Doom
 
+        $('#Gollum').detach().appendTo('#mount-doom');
 };
 
 // COMMIT YOUR WORK
@@ -300,6 +305,7 @@ const weWantsIt = () => {
 // ============
 // Chapter 13
 // ============
+
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
