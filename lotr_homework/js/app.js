@@ -242,10 +242,17 @@ const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 
+  alert('the horn of gondor has been blown');
+
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+
+  const $boromir = $("li:contains('Boromir')");
+        $boromir.css("text-decoration", "line-through");
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
+  const $urukHai = $('li:contains("The Uruk-hai")').remove();
+        $urukHai.remove();
 };
 
 // COMMIT YOUR WORK
