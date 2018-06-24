@@ -104,14 +104,12 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-
-  // ADD a empty DIV $('#the-ring')
+  // 2. add the ring as a child of Frodo
 
   $oneRingToRuleThemAll = $('<div id="the-ring"></div>');
-
   $('li:contains("Frodo")').append($oneRingToRuleThemAll);
 
-  // 2. add the ring as a child of Frodo
+
 };
 
 // COMMIT YOUR WORK
@@ -121,15 +119,16 @@ const keepItSecretKeepItSafe = () => {
 // Chapter 4
 // ============
 const makeBaddies = () => {
+  // 1. display an unordered list of baddies in Mordor
+  // 2. give each of the baddies a class of "baddy"
+  // 3. remember to append them to Mordor
 
   const $ul = $('<ul>').appendTo($('#Mordor'));
 
   for (let i = 0; i < baddies.length; i++){
   $('<li>').addClass('baddy').text(baddies[i]).appendTo($ul);
   }
-  // 1. display an unordered list of baddies in Mordor
-  // 2. give each of the baddies a class of "baddy"
-  // 3. remember to append them to Mordor
+
 };
 
 // COMMIT YOUR WORK
@@ -141,8 +140,9 @@ const makeBaddies = () => {
 
 
 const makeBuddies = () => {
-
   // 1. create an aside tag and append it to middle-earth below mordor
+  // 2. display an unordered list of buddies in the aside
+  // 3. give each of the buddies a class of "buddy"
 
   const $aside = $('<aside>').appendTo($('#middleEarth'));
 
@@ -150,9 +150,6 @@ const makeBuddies = () => {
   $('<li>').addClass('buddy').text(buddies[i]).appendTo($aside);
   }
 
-  // 2. display an unordered list of buddies in the aside
-
-  // 3. give each of the buddies a class of "buddy"
 };
 
 // COMMIT YOUR WORK
@@ -183,10 +180,10 @@ const beautifulStranger = () => {
   // 1. change the buddy 'Strider' textnode to "Aragorn"
   // hint: You can get a list of elements by tag name, such as 'aside'
   // change buddy.strider to aragorn
-
   // find buddy.strider and save to variable
-      const $strider = $('.buddy:eq(3)')
   // set the variable to variable.text('aragorn');
+
+      const $strider = $('.buddy:eq(3)')
       $strider.text('Aragorn');
 };
 
@@ -227,11 +224,11 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-    const $gandalf = $("li:contains('Gandalf the Grey')");
-          $gandalf.addClass('the-white').text('Gandalf the white');
   // 2. add a class "the-white" to this element
   // 3. in the style.css file, add a css rule to make elements
   //     of the class "the-white" have a white background and a grey border
+  const $gandalf = $("li:contains('Gandalf the Grey')");
+        $gandalf.addClass('the-white').text('Gandalf the white');
 
 };
 
@@ -254,7 +251,7 @@ const hornOfGondor = () => {
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
-  const $urukHai = $('li:contains("The Uruk-hai")').remove();
+  const $urukHai = $('li:contains("The Uruk-hai")')
         $urukHai.remove();
 };
 
@@ -267,7 +264,6 @@ const hornOfGondor = () => {
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
   // 2. add a div with an id of 'mount-doom' to Mordor
 
 const $frodo = $('li:contains("Frodo")')
