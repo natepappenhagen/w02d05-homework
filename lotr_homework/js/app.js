@@ -289,14 +289,14 @@ const $mordor = $('#Mordor')
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-        $('#Mordor').append('<div id="Gollum"></div>');
+        $('#Mordor').append('<div id="gollum"></div>');
 
   // 2. Move the ring from Frodo and give it to Gollum
-        $('#the-ring').detach().appendTo('#Gollum');
+        $('#the-ring').detach().appendTo('#gollum');
 
   // 3. Move Gollum into Mount Doom
 
-        $('#Gollum').detach().appendTo('#mount-doom');
+        $('#gollum').detach().appendTo('#mount-doom');
 };
 
 // COMMIT YOUR WORK
@@ -309,33 +309,13 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+      $('#gollum').remove();
   // 2. remove all the baddies from the DOM
-
+      $('.baddy').remove();
   // 3. Move all the hobbits back to the shire
+      $('.hobbits').detach().appendTo('#The-Shire');
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // COMMIT YOUR WORK
