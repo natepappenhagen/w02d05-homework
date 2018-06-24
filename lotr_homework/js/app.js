@@ -194,6 +194,7 @@ const beautifulStranger = () => {
 // ============
 // Chapter 8
 // ============
+
 const forgeTheFellowShip = () => {
   // 1. create a new div with an id 'the-fellowship'
       const $theFellowship = $('<div id="the-fellowship"></div>')
@@ -267,6 +268,14 @@ const itsDangerousToGoAlone = () => {
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 
+const $frodo = $('li:contains("Frodo")')
+      $frodo.detach().appendTo('#Mordor');
+
+const $samwise = $('li:contains("Samwise")')
+      $samwise.detach().appendTo('#Mordor');
+
+const $mordor = $('#Mordor')
+      $mordor.append('<div id="mount-doom"></div>')
 };
 
 // COMMIT YOUR WORK
