@@ -341,4 +341,21 @@ $(() => {
   $('#12').on('click', weWantsIt);
   $('#13').on('click', thereAndBackAgain);
 
+
+
+// auto button clicking
+
+const $buttons = $('button').toArray();
+
+let index = 0;
+const buttonClicks = setInterval(
+  function() {
+    if (index > $buttons.length -1){
+      clearInterval(buttonClicks);
+
+    }
+    $buttons[index].click();
+    index++
+  },
+  1250);
 });
